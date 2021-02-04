@@ -1,8 +1,10 @@
 # "CrypCat" 
 
    <p align="center">
-   ![Image alt](https://github.com/6aldej/ImagesForProjects/blob/master/CrypCat/logo.png)
+   
    </p>
+   
+   ![Image alt](https://github.com/6aldej/ImagesForProjects/blob/master/CrypCat/logo.png)
    
   🕹Данное приложение предназначено для отслеживания курса криптовалют.
   
