@@ -1,0 +1,22 @@
+.coinsummary {
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 800px;
+    background-image: linear-gradient(135deg, #f5f7fa 10%, #c3cfe2 100%);
+    box-shadow: 0 0 15px 10px rgba(0,0,0,0.5);
+}
+
+.coinsummary-block {
+  padding: 10px;
+  margin: 20px;
+  background-color: #fff;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border-radius: 20px;
+}
+
+.coinsummary-img {
+  max-width: 40px;
+  padding-right: 5px;
+}
+

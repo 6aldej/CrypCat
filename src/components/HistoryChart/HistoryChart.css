@@ -1,0 +1,52 @@
+.chart-block {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+canvas {
+    background-color:#2a2a2f;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 300px;
+}
+
+.coin-data-head {
+    margin-bottom: 30px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.coin-data-head p {
+    font-weight: bold;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.coin-data-head-detail img {
+    width: 50px;
+}
+
+.coin-data-head-detail {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 850px) {
+    .coin-data-head-detail img {
+        width: 30px;
+    }
+    .coin-data-head {
+        font-size: 13px;
+    }
+
+    canvas {
+        height: 200px;
+    }
+}

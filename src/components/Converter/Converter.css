@@ -1,0 +1,23 @@
+.converter{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+@media screen and (max-width: 850px) {
+    .converter {
+        flex-direction: column;
+    }
+  }
+
+.converter-group {
+    margin: 5px;
+}
+
+.converter-btn {
+    outline: none;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}

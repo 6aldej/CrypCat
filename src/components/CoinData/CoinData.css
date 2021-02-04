@@ -1,0 +1,16 @@
+.coin-data h2 {
+    text-align: center;
+}
+
+.coin-data-info {
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    
+}
+
+.coin-data-category {
+    font-size: 12px;
+}

@@ -1,0 +1,14 @@
+.header-text {
+    text-align: center;
+    margin: 0;
+    color: #fff;
+}
+
+.header {
+    margin: 10px;
+}
+
+.logoImg {
+    margin: auto;
+    max-width: 100px;
+}
