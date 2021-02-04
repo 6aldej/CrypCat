@@ -1,6 +1,4 @@
-# "CrypCat" 
-
-   <p align="center">
+#  <p align="center">
     <img src="https://github.com/6aldej/ImagesForProjects/blob/master/CrypCat/logo.png" alt="logo"/>
    </p>
    
