@@ -14,10 +14,14 @@
  
  ## Функционал приложения 🎢
  
- ![Image alt](https://github.com/6aldej/ImagesForProjects/blob/master/CrypCat/1.png)
- 
- ![Image alt](https://github.com/6aldej/ImagesForProjects/blob/master/CrypCat/2.png)
-  
+ <p align="center">
+    <img src="https://github.com/6aldej/ImagesForProjects/blob/master/CrypCat/1.png" alt="1"/>
+  </p>
+   
+  <p align="center">
+    <img src="https://github.com/6aldej/ImagesForProjects/blob/master/CrypCat/2.png" alt="2"/>
+  </p>
+
  ## Установка приложения 🚀
 
     git clone https://github.com/6aldej/CrypCat
