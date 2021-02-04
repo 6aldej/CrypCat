@@ -1,10 +1,10 @@
 # "CrypCat" 
 
-   ![Image alt](https://github.com/6aldej/ImagesForProjects/blob/master/CrypCat/logo.png)
+   ![Image alt](https://github.com/6aldej/ImagesForProjects/blob/master/CrypCat/logo.png){margin: 0 auto}
    
   🕹Данное приложение предназначено для отслеживания курса криптовалют.
   
-  🌍Деплой готового приложения на **Heroku:** <>.  
+  🌍Деплой готового приложения на **Heroku:** <https://crypcat.herokuapp.com/>.  
   
   📚Приложение написано на **React JS** с применением библиотек: **React Router, Axios.**  
   
