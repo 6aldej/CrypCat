@@ -1,49 +1,38 @@
-import React, { useRef, useEffect, useState } from 'react';
-import Chartjs from 'chart.js';
-import { hisoryOptions } from '../../chartConfigs/chartConfigs';
-import './HistoryChart.css';
+import React, { useEffect, useState} from 'react';
+import { hisoryOptions, chartStyle } from '../../chartConfigs/chartConfigs';
+import { Line } from 'react-chartjs-2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDollarSign, faSortDown, faSortUp } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import './HistoryChart.css';
 
 const HistoryChart = ({data}) => {
-    const chartRef = useRef();
+    const [chartDataDay, setChartDataDay] = useState({});
+    const [chartDataWeek, setChartDataWeek] = useState({});
+    const [chartDataYear, setChartDataYear] = useState({});
     const {day, week, year, detail} = data;
-    const [timeFormat, setTimeFormat] = useState('24h');
-    const determineTimeFormat = () => {
-        switch (timeFormat) {
-            case "24h":
-                return day;
-            case "7d":
-                return week;
-            case "1y":
-                return year;
-            default:
-                return day;
+
+    const setChart = (sets, data, time) => {
+        sets({
+            datasets: [{
+                label: `price of ${detail.name} in a ${time}`,
+                data: data,
+                ...chartStyle
+            }]
+        })
+    }
+
+    const charts = () => {
+        if (detail) {
+            setChart(setChartDataDay, day, 'day');
+            setChart(setChartDataWeek, week, 'week');
+            setChart(setChartDataYear, year, 'year');
         }
-        
     }
 
     useEffect(() => {
-        if (chartRef && chartRef.current && detail) {
-            new Chartjs(chartRef.current, {
-                type: 'line',
-                data: {
-                    datasets: [{
-                        label: `${detail.name} price`,
-                        data: determineTimeFormat(),
-                        hoverBackgroundColor: "#292a73",
-                        backgroundColor: "#29b5ce91",
-                        borderColor: "#29b5ce",
-                        pointRadius: 1,
-                    }]
-                },
-                options: {
-                    ...hisoryOptions
-                }
-            });
-        }
-    });
+        charts()
+    }, []);
 
     const renderPrice = () => {
         if (detail) {
@@ -76,16 +65,21 @@ const HistoryChart = ({data}) => {
         }
     }
 
-    return (
-        <div className="chart-block">
-            <div>{renderPrice()}</div>
-            <div>
-                <canvas ref={chartRef} id="myChart"></canvas>
+    const renderChart = (data) => {
+        return (
+            <div className="chart-block">
+                <Line data={data} options={hisoryOptions}/>
             </div>
-            <div className="chart-button mt-1">
-                <button onClick={() => setTimeFormat("24h")} className="btn btn-outline-secondary btn-sm">24h</button>
-                <button onClick={() => setTimeFormat("7d")} className="btn btn-outline-secondary btn-sm mx-1">7d</button>
-                <button onClick={() => setTimeFormat("1y")} className="btn btn-outline-secondary btn-sm">1y</button>
+        )
+    }
+
+    return (
+        <div className="block">
+            <div>{renderPrice()}</div>
+            <div className="charts-block">
+                {renderChart(chartDataDay)}
+                {renderChart(chartDataWeek)}
+                {renderChart(chartDataYear)}
             </div>
         </div>
     )

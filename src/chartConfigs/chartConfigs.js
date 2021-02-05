@@ -18,3 +18,10 @@ export const hisoryOptions = {
         ],
     },
 };
+
+export const chartStyle = {
+    hoverBackgroundColor: "#292a73",
+    backgroundColor: "#29b5ce91",
+    borderColor: "#29b5ce",
+    pointRadius: 1,
+}

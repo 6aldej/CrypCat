@@ -1,4 +1,4 @@
-.chart-block {
+.block {
     background-color: #fff;
     padding: 20px;
     margin-bottom: 30px;
@@ -7,11 +7,16 @@
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-canvas {
-    background-color:#2a2a2f;
-    border-radius: 5px;
-    margin-bottom: 10px;
+.charts-block {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.chart-block {
     height: 300px;
+    width: 100%;
+    margin: 10px;
 }
 
 .coin-data-head {
@@ -37,6 +42,13 @@ canvas {
     display: flex;
     align-items: center;
 }
+
+canvas {
+    background-color:#2a2a2f;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
 
 @media screen and (max-width: 850px) {
     .coin-data-head-detail img {
